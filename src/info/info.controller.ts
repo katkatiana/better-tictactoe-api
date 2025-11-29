@@ -15,7 +15,6 @@ export class InfoController {
 
   @Post('/validate-form')
   getFormConfig(@Body() bodyRequest: UpdateUserInfoRequest): Promise<BaseResponse> {
-    console.log("bodyRequest", bodyRequest)
     return this.infoService.validateFormInfo(bodyRequest);
   }
 }
